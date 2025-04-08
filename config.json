@@ -1,0 +1,6 @@
+{"nullable_columns" : ["position", "time", "milliseconds", "fastestLap", "fastestLapTime", "fastestLapSpeed", "rank", "number", "code", 
+                    "fp1_time", "fp1_date", "fp2_time", "fp2_date", "fp3_time", "fp3_date", "quali_date", "quali_time", "sprint_time", "sprint_date"],
+"drop_columns" : ["url"],
+"columns_datatypes" : {"dateteime" : ["fp1_date", "fp2_date", "fp3_date", "quali_date", "sprint_date", "dob"], "time" : ["fp1_time", "fp2_time", "fp3_time", "quali_time", "sprint_time", "fastestLapTime", "time"], "int" : ["number" , "fastestLap" , "milliseconds" ,"position", "rank"]
+                    , "float" : ["fastestLapSpeed", "duration"]}
+} 
