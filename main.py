@@ -17,7 +17,7 @@ def main():
         df = functions.drop_columns(df, config['drop_columns'])
         df = functions.datatype_col(df, config["columns_datatypes"])
         print(filename.replace('.csv', ''))
-        #print(df.dtypes)
+        functions.write_csv(filename, df, '/Users/hannahdorney/Documents/GitHub/f1project/cleandata')
 
 if __name__ == '__main__':
     main()

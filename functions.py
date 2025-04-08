@@ -3,6 +3,7 @@ from datetime import date, time
 import numpy as np
 import json
 import traceback
+import os
 
 def import_csv(csv_path):
     ''' Import csv file.
@@ -123,3 +124,12 @@ def convert_to_time(value):
             return (pd.Timestamp('1970-01-01') + pd.to_timedelta(seconds, unit='s')).time()
     except:
         return np.nan
+    
+def write_csv(filename, df, folder):
+    try:
+        f = filename.replace('.csv', '') + "_new.csv"
+        os.makedirs(folder, exist_ok=True) 
+        new_file = os.path.join(folder, f)
+        return df.to_csv(new_file)
+    except:
+        return f"Failed to commit new file {f}"
